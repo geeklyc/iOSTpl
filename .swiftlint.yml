@@ -1,0 +1,43 @@
+disabled_rules:          # 执行时排除掉的规则
+  - trailing_newline     # 尾部新开一行
+  - trailing_semicolon   # 尾部;
+  - trailing_whitespace  # 空格检测
+  - type_body_length     # {}代码块的长度
+  - function_body_length # function长度
+  - file_length          # 可以超过400行
+  - function_parameter_count #参数可以超过5个
+  - cyclomatic_complexity #修饰符
+
+opt_in_rules:            # 启用指定的规则
+  - missing_docs
+
+included:                # 希望检索的目录路径
+  - ./iOSTpl
+
+excluded:                # 希望忽略的目录路径
+  - ./Pods
+
+#### 以下是警告还是提示的设置 #####
+
+line_length: 300
+
+force_cast: warning      # 强制类型转换
+force_try:
+  severity: warning      # 强制try
+
+
+type_name:
+  allowed_symbols: "_"   # 允许_字符
+  min_length: 1          # 最短的类型名
+  max_length:            # 最长的类型名
+    warning: 40
+    error: 60
+  excluded:              # 排除某个名字
+    - iPhone
+
+identifier_name:
+  min_length: 1           # 只有最小长度
+  excluded:              # 排除某些名字
+    - id
+    - URL
+    - APIKey

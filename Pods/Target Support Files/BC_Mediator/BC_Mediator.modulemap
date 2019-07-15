@@ -1,0 +1,6 @@
+framework module BC_Mediator {
+  umbrella header "BC_Mediator-umbrella.h"
+
+  export *
+  module * { export * }
+}
